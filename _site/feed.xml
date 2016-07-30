@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Jul 2016 21:12:30 +0200</pubDate>
-    <lastBuildDate>Sat, 30 Jul 2016 21:12:30 +0200</lastBuildDate>
+    <pubDate>Sat, 30 Jul 2016 21:17:27 +0200</pubDate>
+    <lastBuildDate>Sat, 30 Jul 2016 21:17:27 +0200</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -54,7 +54,7 @@ your &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.py&lt;/code&gt; :&
       </item>
     
       <item>
-        <title>:w with sudo</title>
+        <title>:w with sudo from within Vim</title>
         <description>&lt;p&gt;When editing a read only file you want to save, you can automatically sudo from
 within vim to write the file. Add this to your &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt;:&lt;/p&gt;
 
@@ -62,12 +62,31 @@ within vim to write the file. Add this to your &lt;code class=&quot;highlighter-
 &lt;/div&gt;
 
 &lt;p&gt;This way, when editing a read-only file, you can save your change by typing
-&lt;code class=&quot;highlighter-rouge&quot;&gt;:w!&lt;/code&gt;. You will be prompted to enter your credentials and the file will be
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:w!!&lt;/code&gt;. You will be prompted to enter your credentials and the file will be
 reloaded.&lt;/p&gt;
 </description>
         <pubDate>Sun, 10 Jul 2016 16:13:31 +0200</pubDate>
         <link>http://yourdomain.com/vim/2016/07/10/Sudo-within-vim-to-write-file.html</link>
         <guid isPermaLink="true">http://yourdomain.com/vim/2016/07/10/Sudo-within-vim-to-write-file.html</guid>
+        
+        
+        <category>vim</category>
+        
+      </item>
+    
+      <item>
+        <title>Redraw Vim screen</title>
+        <description>&lt;p&gt;To redraw the vim screen if something weired is displayed (after opening a
+binary file by mistake, or scrolling with tmux open…) you don’t have ot
+restart Vim. Simply use the command &lt;code class=&quot;highlighter-rouge&quot;&gt;:redraw!&lt;/code&gt;. I mapped that to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;leader&amp;gt;r&lt;/code&gt; in
+my &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;map &amp;lt;leader&amp;gt;r :redraw!&amp;lt;CR&amp;gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 05 Jul 2016 10:12:31 +0200</pubDate>
+        <link>http://yourdomain.com/vim/2016/07/05/redraw-vim-screen.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/vim/2016/07/05/redraw-vim-screen.html</guid>
         
         
         <category>vim</category>

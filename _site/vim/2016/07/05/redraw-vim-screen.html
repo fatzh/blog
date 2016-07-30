@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>51st Floor tech stuff</title>
-  <meta name="description" content="Just some notes and snippets or general things tech related.
-">
+  <title>Redraw Vim screen</title>
+  <meta name="description" content="To redraw the vim screen if something weired is displayed (after opening abinary file by mistake, or scrolling with tmux open…) you don’t have otrestart Vim....">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/vim/2016/07/05/redraw-vim-screen.html">
   <link rel="alternate" type="application/rss+xml" title="51st Floor tech stuff" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -55,49 +54,25 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Redraw Vim screen</h1>
+    <p class="post-meta"><time datetime="2016-07-05T10:12:31+02:00" itemprop="datePublished">Jul 5, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 30, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>To redraw the vim screen if something weired is displayed (after opening a
+binary file by mistake, or scrolling with tmux open…) you don’t have ot
+restart Vim. Simply use the command <code class="highlighter-rouge">:redraw!</code>. I mapped that to <code class="highlighter-rouge">&lt;leader&gt;r</code> in
+my <code class="highlighter-rouge">vimrc</code>.</p>
 
-        <h2>
-          <a class="post-link" href="/vim/2016/07/30/Preview-Markdown-files-from-vim.html">Preview markdown files from Vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 29, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/django/2016/07/29/S3-Bucket-without-token.html">Remove S3 Bucket authentication tokens</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 10, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2016/07/10/Sudo-within-vim-to-write-file.html">:w with sudo from within Vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 5, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2016/07/05/redraw-vim-screen.html">Redraw Vim screen</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge">map &lt;leader&gt;r :redraw!&lt;CR&gt;
 </div>
+
+  </div>
+
+</article>
 
       </div>
     </div>
