@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Remove S3 Bucket authentication tokens</title>
-  <meta name="description" content="By default S3 bucket files served via Django using the Django Storagesapplication append an authentication token which expires after some time. Thiscan be a ...">
+  <title>Preview markdown files from Vim</title>
+  <meta name="description" content="To preview a markdown file in Vim, use pandoc to do the conversion,  and bcat to pipe the output to a browser window. Then in vimrc add the following map:">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/tech/2016/07/29/S3-Bucket-without-token.html">
+  <link rel="canonical" href="http://yourdomain.com/vim/2016/07/30/Preview-Markdown-files-from-vim.html">
   <link rel="alternate" type="application/rss+xml" title="51st Floor tech stuff" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -57,20 +57,19 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Remove S3 Bucket authentication tokens</h1>
-    <p class="post-meta"><time datetime="2016-07-29T17:13:31+02:00" itemprop="datePublished">Jul 29, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Preview markdown files from Vim</h1>
+    <p class="post-meta"><time datetime="2016-07-30T17:13:31+02:00" itemprop="datePublished">Jul 30, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>By default S3 bucket files served via Django using the Django Storages
-application append an authentication token which expires after some time. This
-can be a problem when sharing images hosted on the bucket via the URLs, as they
-will disappear after some time. To prevent this, there’s an option to add to
-your <code class="highlighter-rouge">settings.py</code> :</p>
+    <p>To preview a markdown file in Vim, use <code class="highlighter-rouge">pandoc</code> to do the conversion,  and <code class="highlighter-rouge">bcat</code> to pipe the output to a browser window. Then in <code class="highlighter-rouge">vimrc</code> add the following map:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">AWS_QUERYSTRING_AUTH</span> <span class="o">=</span> <span class="bp">False</span></code></pre></figure>
+<div class="highlighter-rouge">map &lt;leader&gt;m :!pandoc % &lt;bar&gt; bcat &lt;CR&gt;
+</div>
+<p><code class="highlighter-rouge">&lt;bar&gt;</code> is the <code class="highlighter-rouge">|</code> (pipe) command in vim.</p>
 
-<p>And the URLs of you files will be generated without token.</p>
+<p>This way, just y pressing <code class="highlighter-rouge">&lt;leader&gt;m</code> I can preview the converted markdown
+document.</p>
 
   </div>
 

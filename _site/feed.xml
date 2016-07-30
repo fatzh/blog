@@ -6,28 +6,50 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jul 2016 17:34:19 +0200</pubDate>
-    <lastBuildDate>Fri, 29 Jul 2016 17:34:19 +0200</lastBuildDate>
+    <pubDate>Sat, 30 Jul 2016 21:03:02 +0200</pubDate>
+    <lastBuildDate>Sat, 30 Jul 2016 21:03:02 +0200</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
+        <title>Preview markdown files from Vim</title>
+        <description>&lt;p&gt;To preview a markdown file in Vim, use &lt;code class=&quot;highlighter-rouge&quot;&gt;pandoc&lt;/code&gt; to do the conversion,  and &lt;code class=&quot;highlighter-rouge&quot;&gt;bcat&lt;/code&gt; to pipe the output to a browser window. Then in &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt; add the following map:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;map &amp;lt;leader&amp;gt;m :!pandoc % &amp;lt;bar&amp;gt; bcat &amp;lt;CR&amp;gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;bar&amp;gt;&lt;/code&gt; is the &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; (pipe) command in vim.&lt;/p&gt;
+
+&lt;p&gt;This way, just y pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;leader&amp;gt;m&lt;/code&gt; I can preview the converted markdown
+document.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Jul 2016 17:13:31 +0200</pubDate>
+        <link>http://yourdomain.com/vim/2016/07/30/Preview-Markdown-files-from-vim.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/vim/2016/07/30/Preview-Markdown-files-from-vim.html</guid>
+        
+        
+        <category>vim</category>
+        
+      </item>
+    
+      <item>
         <title>Remove S3 Bucket authentication tokens</title>
-        <description>&lt;p&gt;By default S3 bucket files served via Django using the Django Storages
+        <description>&lt;p&gt;By default S3 bucket files served via Django using the &lt;a href=&quot;http://django-storages.readthedocs.io/en/latest/&quot;&gt;Django
+Storages&lt;/a&gt;
 application append an authentication token which expires after some time. This
 can be a problem when sharing images hosted on the bucket via the URLs, as they
-will disappear after some time. To prevent this, there’s an option to add to
+will disappear after some time. To prevent this, there’s an option a bit hidden which can be added to
 your &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.py&lt;/code&gt; :&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;AWS_QUERYSTRING_AUTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;span class=&quot;n&quot;&gt;AWS_QUERYSTRING_AUTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;And the URLs of you files will be generated without token.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2016 17:13:31 +0200</pubDate>
-        <link>http://yourdomain.com/tech/2016/07/29/S3-Bucket-without-token.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/tech/2016/07/29/S3-Bucket-without-token.html</guid>
+        <link>http://yourdomain.com/django/2016/07/29/S3-Bucket-without-token.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/django/2016/07/29/S3-Bucket-without-token.html</guid>
         
         
-        <category>tech</category>
+        <category>django</category>
         
       </item>
     
